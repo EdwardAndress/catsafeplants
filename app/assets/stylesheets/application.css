@@ -13,3 +13,12 @@
  *= require_tree .
  *= require_self
  */
+.cat_safe_true {
+  color: green;
+  font-size: 1.5em;
+}
+
+.cat_safe_false {
+  color: red;
+  font-size: 1.5em;
+}

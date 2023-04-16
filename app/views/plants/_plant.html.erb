@@ -1,4 +1,4 @@
-<div id="<%= dom_id plant %>">
+<article id="<%= dom_id plant %>">
   <p>
     <strong>Common name:</strong>
     <%= plant.common_name %>
@@ -9,9 +9,14 @@
     <%= plant.latin_name %>
   </p>
 
-  <p>
+  <p class=cat_safe_<%=plant.cat_safe%>>
     <strong>Cat safe:</strong>
     <%= plant.cat_safe %>
+    <% if plant.cat_safe %>
+      😺
+    <% else %>
+      😾
+    <% end %>
   </p>
 
-</div>
+</article>

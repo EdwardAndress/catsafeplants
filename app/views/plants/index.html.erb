@@ -1,6 +1,12 @@
+<head>
+  <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+  <%= stylesheet_link_tag "application.css" %>
+</head>
+
+
 <p style="color: green"><%= notice %></p>
 
-<h1>Plants</h1>
+<h1>Check if a plant is cat safe</h1>
 
 <%= form_with url: "/plants", method: :get do |form| %>
   <%= form.label :common_name, "Search for:" %>
