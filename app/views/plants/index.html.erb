@@ -1,0 +1,21 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Plants</h1>
+
+<%= form_with url: "/plants", method: :get do |form| %>
+  <%= form.label :common_name, "Search for:" %>
+  <%= form.search_field :name %>
+  <%= form.submit "Search" %>
+<% end %>
+
+<div>
+  <br>
+  <a href="/plants">Show all plants</a>
+  <br>
+</div>
+
+<div id="plants">
+  <% @plants.each do |plant| %>
+    <%= render plant %>
+  <% end %>
+</div>
